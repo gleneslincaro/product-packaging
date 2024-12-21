@@ -1,0 +1,27 @@
+/* productForm.css */
+
+/* Selected Products List */
+.selected-products-list {
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 10px;
+  }
+  
+  /* List Item Styling for Selected Products */
+  .selected-products-list .MuiListItem-root {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .selected-products-list .MuiListItem-root:hover {
+    background-color: #f1f1f1;
+  }
+  

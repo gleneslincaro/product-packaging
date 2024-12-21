@@ -1,0 +1,17 @@
+/* global.css */
+
+/* Body background and general styles */
+body {
+  background: linear-gradient(135deg, #f0f4f8, #e2e8f0);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensuring that all margin and padding are set to 0 by default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

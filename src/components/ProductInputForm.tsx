@@ -49,7 +49,7 @@ const ProductInputForm: React.FC<ProductInputFormProps> = ({
       <List sx={{ maxHeight: 200, overflowY: 'auto', marginBottom: 2 }}>
         {filteredProducts.map((product) => (
           <ListItem
-            button
+            component="li"
             key={product.id}
             onClick={() => setSelectedProduct(product)}
             sx={{

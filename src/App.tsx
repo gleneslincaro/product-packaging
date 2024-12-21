@@ -74,7 +74,7 @@ const App: React.FC = () => {
 
       {/* Product Input Form */}
       <ProductInputForm
-        products={productsData}
+        products={productsData.map((product) => ({ ...product, quantity: 1 }))}
         onAddProduct={handleAddProduct}
       />
 

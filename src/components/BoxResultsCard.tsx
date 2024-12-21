@@ -1,4 +1,3 @@
-// BoxResultsCard.tsx
 import React from 'react';
 import { PackedProduct } from '../types';
 

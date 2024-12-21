@@ -1,23 +1,21 @@
-/* buttons.css */
-
 /* Button Styling */
 .MuiButton-root {
     font-size: 16px;
     padding: 12px 30px;
-    background-color: #004d40;
+    background-color: #004d40! important;
     color: white;
-    border-radius: 50px;
+    border-radius: 10px;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
   .MuiButton-root:hover {
-    background-color: #004d40;
+    background-color: #095e4f;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
   
   .MuiButton-root:disabled {
-    background-color: #80cbc4;
+    background-color: #80cbc4 !important;
     box-shadow: none;
   }
   

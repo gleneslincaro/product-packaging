@@ -5,7 +5,7 @@ import { PackingResult } from './packingResult';
 
 export {
     Product,
-    Box,
+    Box as PackingBox,
     PackedProduct,
     PackingResult,
 }

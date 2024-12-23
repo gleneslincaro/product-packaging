@@ -3,7 +3,7 @@
     font-size: 16px;
     padding: 12px 30px;
     background-color: #004d40! important;
-    color: white;
+    color: white! important;
     border-radius: 10px;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);

@@ -21,7 +21,7 @@ const Error = ({ errorMessage, onClose }: { errorMessage: string; onClose: () =>
 
   const handleClose = () => {
     setOpen(false);
-    onClose(); // Callback to reset error state in App component
+    onClose();
   };
 
   return (

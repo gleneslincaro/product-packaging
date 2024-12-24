@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+# Product Packaging App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a product packaging application that helps you determine the best way to pack products into available boxes.
 
-## Available Scripts
+## Installation and Running the Project
 
-In the project directory, you can run:
+1. Clone the repository:
+  ```sh
+  git clone https://github.com/gleneslincaro/product-packaging.git
+  cd product-packaging
+  ```
 
-### `npm start`
+2. Install the dependencies:
+  ```sh
+  npm install
+  ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. Run the project:
+  ```sh
+  npm start
+  ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Instructions on How to Use the App
 
-### `npm test`
+1. Browse the product list to select an item and specify the desired quantity.
+2. In the selected products list, you can adjust the quantity or remove any product.
+3. Click the "Pack Products" button to view the packing details.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Examples of Inputs and Expected Outputs
 
-### `npm run build`
+### Example 1
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Input:**
+- Products:
+  - Product A: 10x10x10 cm, 1 kg, quantity: 2
+  - Product B: 5x5x5 cm, 0.5 kg, quantity: 4
+- Boxes:
+  - Box 1: 20x20x20 cm, weight limit: 10 kg
+  - Box 2: 15x15x15 cm, weight limit: 5 kg
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Expected Output:**
+- Box 2:
+  - Product A: 2 units
+  - Product B: 4 units
+  - Total Volume: 2500 cm³
+  - Total Weight: 4 kg
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Example 2
 
-### `npm run eject`
+**Input:**
+- Products:
+  - Product C: 30x30x30 cm, 5 kg, quantity: 1
+  - Product D: 10x10x10 cm, 1 kg, quantity: 3
+- Boxes:
+  - Box 1: 40x40x40 cm, weight limit: 15 kg
+  - Box 2: 50x50x50 cm, weight limit: 20 kg
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Expected Output:**
+- Box 1:
+  - Product C: 1 unit
+  - Product D: 3 units
+  - Total Volume: 30000 cm³
+  - Total Weight: 8 kg
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Known Limitations or Edge Cases
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- The app currently supports a maximum of 10 products.
+- Products that are too large to fit into the largest available box will not be packed and will be listed in the error message.
+- The app assumes that all products are rectangular and does not support other shapes.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

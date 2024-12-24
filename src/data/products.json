@@ -1,6 +1,6 @@
 [
-    { "id": 1, "name": "Wireless Mouse", "length": 70, "width": 8, "height": 5, "weight": 0.5 },
-    { "id": 2, "name": "Gaming Keyboard", "length": 100, "width": 15, "height": 4, "weight": 1.5 },
+    { "id": 1, "name": "Wireless Mouse", "length": 10, "width": 8, "height": 5, "weight": 0.5 },
+    { "id": 2, "name": "Gaming Keyboard", "length": 45, "width": 15, "height": 4, "weight": 1.5 },
     { "id": 3, "name": "Laptop Stand", "length": 30, "width": 20, "height": 10, "weight": 2.0 },
     { "id": 4, "name": "Bluetooth Speaker", "length": 12, "width": 10, "height": 8, "weight": 0.8 },
     { "id": 5, "name": "Phone Charger", "length": 8, "width": 6, "height": 3, "weight": 0.2 },

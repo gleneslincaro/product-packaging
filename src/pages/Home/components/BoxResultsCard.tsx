@@ -1,12 +1,20 @@
-import React from 'react';
-import { PackedProduct } from '../types';
+import React from "react";
+import { PackedProduct } from "../types";
+import { Typography } from "@mui/material";
 
 interface BoxResultsCardProps {
   box: string;
   products: PackedProduct[];
+  totalVolume: number;
+  totalWeight: number;
 }
 
-const BoxResultsCard: React.FC<BoxResultsCardProps> = ({ box, products }) => {
+const BoxResultsCard: React.FC<BoxResultsCardProps> = ({
+  box,
+  products,
+  totalVolume,
+  totalWeight,
+}) => {
   return (
     <div className="box-results-card">
       <h3>{box}</h3>
@@ -17,6 +25,12 @@ const BoxResultsCard: React.FC<BoxResultsCardProps> = ({ box, products }) => {
           </li>
         ))}
       </ul>
+      <Typography variant="body2" color="#459789">
+        Total Volume: {totalVolume.toLocaleString()} m³
+      </Typography>
+      <Typography variant="body2" color="#459789">
+        Total Weight: {totalWeight.toLocaleString()} kg
+      </Typography>
     </div>
   );
 };

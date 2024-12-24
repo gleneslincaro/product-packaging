@@ -12,6 +12,7 @@ import Error from "../../common/components/Error";
 import ProductInputForm from "./components/ProductInputForm";
 import BoxResultsCard from "./components/BoxResultsCard";
 import usePacking from "./hooks/usePacking";
+import AvailableBoxes from "./components/AvailableBoxes";
 
 const Home: React.FC = () => {
   const {
@@ -24,6 +25,7 @@ const Home: React.FC = () => {
     handleDecreaseQuantity,
     handleRemoveProduct,
     handleErrorDialogClose,
+    calculateVolume,
   } = usePacking(availableBoxes);
   return (
     <Container maxWidth="md" className="container">
@@ -35,6 +37,11 @@ const Home: React.FC = () => {
           Add products and pack them into boxes efficiently
         </Typography>
       </Box>
+
+      <AvailableBoxes
+        availableBoxes={availableBoxes}
+        calculateVolume={calculateVolume}
+      />
 
       {/* Product Input Form */}
       <ProductInputForm
@@ -68,7 +75,7 @@ const Home: React.FC = () => {
         </Button>
       </Box>
 
-      {error && products.length && (
+      {error && (
         <Error errorMessage={error} onClose={handleErrorDialogClose} />
       )}
 
@@ -83,7 +90,12 @@ const Home: React.FC = () => {
             {packingResults.map((result, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>
                 <Card>
-                  <BoxResultsCard box={result.box} products={result.products} />
+                  <BoxResultsCard
+                    box={result.box}
+                    products={result.products}
+                    totalVolume={result.totalVolume}
+                    totalWeight={result.totalWeight}
+                  />
                 </Card>
               </Grid>
             ))}
